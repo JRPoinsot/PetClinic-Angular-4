@@ -1,0 +1,9 @@
+  <ngb-accordion  activeIds="petlistpanel">
+   <ngb-panel title="Liste des animaux de la clinique" id="petlistpanel">
+     <ng-template ngbPanelContent>
+       <div class="red">
+         <app-pet *ngFor="let currentPet of petList" [pet]="currentPet"></app-pet>
+       </div>
+     </ng-template>
+    </ngb-panel>
+  </ngb-accordion>

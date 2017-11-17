@@ -1,0 +1,58 @@
+<ngb-accordion  activeIds="createpetpanel">
+  <ngb-panel title="Accueil d'un nouvel animal" id="createpetpanel">
+    <ng-template ngbPanelContent>
+    <div>
+      <form (ngSubmit)="register()" [formGroup]="petForm">
+      <p *ngFor="let alert of alerts">
+        <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">{{ alert.message }}</ngb-alert>
+      </p>
+      <div class="row justify-content-md-left">
+        <div class="col col-lg-1">
+          <label>Nom : </label>
+        </div>
+        <div class="col col-lg-6">
+          <input name="name" formControlName="petname">
+          <div class="red" *ngIf="nameCtrl.dirty && nameCtrl.hasError('required')">Le nom de l'animal est obligatoire</div>
+          <div class="red" *ngIf="nameCtrl.dirty && nameCtrl.hasError('minlength')">Le nom de l'animal doit être au minimum de 3 caractères minimum</div>
+        </div>
+      </div>
+
+      <div class="row justify-content-md-left">
+        <div class="col col-lg-1">
+          <label>Poids :</label>
+        </div>
+        <div class="col col-lg-6">
+          <input name="weight" formControlName="petweight">
+          <div class="red" *ngIf="petForm.get('petweight').dirty && petForm.get('petweight').hasError('required')">Le poids de l'animal est obligatoire</div>
+          <div class="red" *ngIf="petForm.get('petweight').dirty && petForm.get('petweight').hasError('pattern')">Le poids de l'animal ne respecte pas le format</div>
+
+        </div>
+      </div>
+      <div class="row justify-content-md-left">
+        <div class="col col-lg-1">
+          <label>Race :</label>
+        </div>
+        <div class="col col-lg-6">
+          <div>
+            <div ngbDropdown class="d-inline-block">
+              <select formControlName="pettype" id="dropdownBasic1" ngbDropdownToggle>
+                <option *ngFor="let type of petTypes" [value]="type" class="dropdown-item">{{PetType[type]}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row justify-content-md-left">
+        <div class="col col-lg-1">
+          <button class="btn btn-outline-success" type="submit" [disabled]="petForm.invalid">Enregistrer</button>
+        </div>
+        <div class="col col-lg-1">
+          <button class="btn btn-outline-danger" type="reset" (click)="reset()">Annuler</button>
+        </div>
+      </div>
+      </form>
+    </div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

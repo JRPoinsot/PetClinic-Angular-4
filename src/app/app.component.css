@@ -1,0 +1,12 @@
+div.menu {
+  background-color: #F8F8FF;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  padding: 2px 2px;
+  border: 1px solid #ADD8E6;
+  width: 95%;
+  height: auto;
+  border-radius: 2px;
+}
