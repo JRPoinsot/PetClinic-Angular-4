@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
-import { PetService } from '../services/pet.service';
-import { Pet, PetType } from '../classes/Pet';
+import { PetService } from '../../services/pet.service';
+import { Pet, PetType } from '../../classes/Pet';
 
 @Component({
   selector: 'app-petform',

@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { PetClinicAppComponent } from './app.component';
-import { PetsComponent } from './pets/pets.component';
-import { PetComponent } from './pet/pet.component';
+import { PetsComponent } from './components/pet/pets.component';
+import { PetComponent } from './components/pet/pet.component';
 import { PetService } from './services/pet.service';
-import { PetFormComponent } from './pet/petForm.component';
+import { PetFormComponent } from './components/pet/petForm.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ProprietaireComponent } from './proprietaire/proprietaire.component';
-import { VeterinaireComponent } from './veterinaire/veterinaire.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProprietaireComponent } from './components/proprietaire/proprietaire.component';
+import { VeterinaireComponent } from './components/veterinaire/veterinaire.component';
 //import { }
 
 export const ROUTES: Routes = [

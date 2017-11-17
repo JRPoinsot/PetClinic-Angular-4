@@ -1,9 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Pet, PetType } from '../classes/Pet';
+import { Pet, PetType } from '../../classes/Pet';
 
 @Component({
 selector: 'app-pet',
-template: `<div *ngIf="show">Nom: {{ pet.name }}, Poids: {{pet.weight}}, Race: {{PetType[type]}}</div>`
+template: `
+  <!--<div *ngIf="show">Nom: {{ pet.name }}, Poids: {{pet.weight}}, Race: {{PetType[pet.type]}}</div>-->
+  <div *ngIf="show">{{ pet | json}}</div>
+`
 })
 export class PetComponent implements OnInit {
 
@@ -11,14 +14,12 @@ export class PetComponent implements OnInit {
 
   // allows you to use PetType in template
   PetType = PetType;
-  type : PetType;
   show:boolean = true;
 
   ngOnInit() {
-    if(this.pet.name == ''){
+    if(this.pet.name == null){
       this.show = false;
     }
-    this.type= this.pet.type;
   }
 
 }
