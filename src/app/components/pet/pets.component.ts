@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { PetService } from '../services/pet.service';
+import { PetService } from '../../services/pet.service';
 
 
 @Component({
