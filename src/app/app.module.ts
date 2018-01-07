@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { PetClinicAppComponent } from './app.component';
 import { PetsComponent } from './components/pet/pets.component';
-import { PetComponent } from './components/pet/pet.component';
+import { BasePetComponent, PetComponent } from './components/pet/pet.component';
 import { PetService } from './services/pet.service';
 import { PetFormComponent } from './components/pet/petForm.component';
+import { PetListComponent } from './components/pet/petList.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,7 +17,6 @@ import { VeterinaireComponent } from './components/veterinaire/veterinaire.compo
 export const ROUTES: Routes = [
 { path: '', component: HomeComponent },
 { path:'pets',component:PetsComponent },
-{ path:'createPet',component:PetFormComponent },
 { path:'proprietaires',component:ProprietaireComponent },
 { path:'veterinaires',component:VeterinaireComponent }
 ];
@@ -26,6 +26,8 @@ export const ROUTES: Routes = [
     PetClinicAppComponent,
     PetsComponent,
     PetFormComponent,
+    BasePetComponent,
+    PetListComponent,
     PetComponent,
     HomeComponent,
     ProprietaireComponent,

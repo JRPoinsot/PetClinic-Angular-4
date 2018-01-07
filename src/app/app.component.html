@@ -1,10 +1,11 @@
-<h1>PetClinic {{parametre}}</h1>
+<div class="header">
+  <h1>PetClinic {{parametre}}</h1>
+</div>
 <div class="menu">
   <div class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
     <a href=""  routerLink="/" class="btn btn-outline-primary">Home</a>
     <button class="btn btn-outline-primary" id="dropdownManual" ngbDropdownToggle>Animaux</button>
     <div ngbDropdownMenu aria-labelledby="dropdownManual">
-      <a href=""  routerLink="createPet" class="dropdown-item">Accueillir un nouvel animal</a>
       <a href=""  routerLink="pets" class="dropdown-item">Liste des animaux</a>
     </div>
     <a href=""  routerLink="proprietaires" class="btn btn-outline-primary">Propriétaires d'animaux</a>

@@ -30,7 +30,7 @@ export class PetFormComponent {
     }
     //init form controls
     this.nameCtrl = fb.control('', [Validators.required, Validators.minLength(3)]);
-    this.weightCtrl = fb.control('', [Validators.required, Validators.pattern('^[0-9]{1,3}$')]);
+    this.weightCtrl = fb.control('', [Validators.required, Validators.pattern('^[0-9,]{1,3}$')]);
     this.petTypeCtrl = fb.control(PetType.Lion);
 
     this.petForm = fb.group({

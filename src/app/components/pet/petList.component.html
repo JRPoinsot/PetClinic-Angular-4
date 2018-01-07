@@ -1,0 +1,6 @@
+<div>
+   <app-pet *ngFor="let currentPet of petList"
+            [pet]="currentPet"
+            (onSelected)="onPetSelected($event)">
+   </app-pet>
+</div>

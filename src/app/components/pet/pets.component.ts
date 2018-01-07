@@ -1,24 +1,17 @@
 import { Component } from '@angular/core';
-
-import { PetService } from '../../services/pet.service';
-
+import { Pet } from '../../classes/Pet';
 
 @Component({
   selector: 'app-pets',
-  templateUrl: './pets.component.html',
-  styleUrls: ['./pets.component.css']
+  templateUrl: './pets.component.html'
 })
 export class PetsComponent {
 
-  petList = {};
-  // add a constructor with PetService
-  constructor(private petService: PetService) {
-    this.petList = this.petService.availableList();
-  }
+  petDetails: Pet = null;
 
-  refreshPetList() {
-    this.petList = this.petService.availableList();
-    return this.petList;
+  refreshPetDetails ($event: Pet): void {
+    console.log($event);
+    this.petDetails = $event;
   }
 
 }

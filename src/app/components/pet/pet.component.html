@@ -1,0 +1,6 @@
+<div *ngIf="show">
+  <label class="clickable"
+        (click)="onPetClick()">
+      {{ pet.name }} ({{PetType[pet.type]}})
+  </label>
+</div>

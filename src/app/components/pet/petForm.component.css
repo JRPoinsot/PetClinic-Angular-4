@@ -9,3 +9,12 @@ input.ng-invalid.ng-dirty {
 border{
   border: 1px red solid;
 }
+
+button:disabled {
+  background-color: #E3E3E3;
+  border: #4E4E4E;
+}
+
+button:hover:disabled {
+  cursor: not-allowed;
+}
